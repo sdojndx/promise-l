@@ -6,15 +6,15 @@
   "version": "0.0.1",
   "description": "Promise library",
   "author": "kofg@live.com",
-  "license": "MIT",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lzutao/promise-l.git"
+    "url": "https://github.com/sdojndx/promise-l"
   },
   "keywords": [
     "promise",
     "async",
-    "await"
+    "limit"
   ],
   "dependencies": {
     "bluebird": "^3.7.2"
