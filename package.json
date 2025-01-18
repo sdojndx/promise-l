@@ -1,0 +1,43 @@
+{
+  "name": "@lz/promise-l",
+  "main": "./dist/src/index.js",
+  "module": "./dist/src/index.esm.js",
+  "types": "./dist/src/index.d.ts",
+  "version": "0.0.1",
+  "description": "Promise library",
+  "author": "kofg@live.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lzutao/promise-l.git"
+  },
+  "keywords": [
+    "promise",
+    "async",
+    "await"
+  ],
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  },
+  "peerDependencies": {
+    "node": ">=16.13.0"
+  },
+  "devDependenciesMeta": {
+    "ts-node": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/chai": "^5.0.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.7",
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register 'test/**/*.test.ts'",
+    "build": "tsc --declaration"
+  }
+}
