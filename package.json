@@ -1,9 +1,10 @@
 {
-  "name": "@lz/promise-l",
-  "main": "./dist/src/index.js",
-  "module": "./dist/src/index.esm.js",
-  "types": "./dist/src/index.d.ts",
-  "version": "0.0.1",
+  "name": "lz-promise-l",
+  "main": "./dist/cjs/index.js",
+  "module": "./src/esm/index.js",
+  "unpkg": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "version": "0.0.3",
   "description": "Promise library",
   "author": "kofg@live.com",
   "license": "ISC",
@@ -17,7 +18,10 @@
     "limit"
   ],
   "dependencies": {
-    "bluebird": "^3.7.2"
+    "axios": "^1.7.9",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
   },
   "peerDependencies": {
     "node": ">=16.13.0"
@@ -38,6 +42,9 @@
   },
   "scripts": {
     "test": "mocha -r ts-node/register 'test/**/*.test.ts'",
-    "build": "tsc --declaration"
+    "build:umd": "tsc --declaration",
+    "build:commonjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run build:umd && npm run build:commonjs && npm run build:esm"
   }
 }

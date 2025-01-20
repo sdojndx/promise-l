@@ -1,17 +1,5 @@
-lz-promise-l
-
-lz-promise-l is a promise execution controller that can automatically limit the number of simultaneous executions of promises.
-
-
-how to use lz-promise-l
-
-```
-npm install lz-promise-l
-```
-
-demo
-```
-import PromiseLimit from 'lz-promise-l';
+import { describe } from 'mocha';
+import PromiseLimit from '../src/index';
 
 const limit = new PromiseLimit(
   // 限制并发数
@@ -74,6 +62,3 @@ LimitAdd();
 setTimeout(()=>{
   LimitAdd();
 },5000);
-
-```
-
