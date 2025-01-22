@@ -1,13 +1,17 @@
 {
   "name": "lz-promise-l",
   "main": "./dist/cjs/index.js",
-  "module": "./src/esm/index.js",
+  "module": "./dist/esm/index.js",
   "unpkg": "./dist/index.ts",
   "types": "./dist/index.d.ts",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Promise library",
   "author": "kofg@live.com",
   "license": "ISC",
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/sdojndx/promise-l"
